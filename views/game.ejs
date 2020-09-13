@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<canvas id = "canvas"></canvas>
+<div id="scoreboard">
+    <div class="score">
+        <label for="player1Score">Player1</label>
+        <div id="player1Score">0</div>
+    </div>
+
+    <div class="score">
+        <label for="player2Score">Player2</label>
+        <div id="player2Score">0</div>
+    </div>
+    
+</div>
+<script>
+    const roomName = "<%=roomName%>"
+    const serverIp = "<%=IP%>"
+    const serverPort = "<%=PORT%>"
+
+</script>
+<script defer src = "http://<%=IP%>:<%=PORT%>/socket.io/socket.io.js"></script>
+<script defer src="./vectors.js"></script>
+<script defer src="./paddle.js"></script>
+<script defer  src="script.js"></script>
+<script defer src="./socketClient.js"></script>
+<link rel="stylesheet" href="style.css">
+</body>
+</html>

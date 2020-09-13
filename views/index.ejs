@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Chat System</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Here The use of defer tag ensures that all the scripts get loaded only then  -->
+    <script defer src= "http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    
+    <style>
+        body{
+            display: block;
+            background-color :#CCC;
+        }
+        .room-container{
+            margin: 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <!-- This is the list of rooms that existed when the page was rendered
+        To dynamically Update the Rooms That are being Created We'll use socketio
+    -->
+
+    <div id="room-container" >
+        <% Object.keys(rooms).forEach(room=>{ %>
+            <div><%= room%></div>
+            <a href="<%=`/${room}`%>">Join</a>
+       <% }) %>
+    </div>
+    <form action="/room" method="POST">
+        <input type="text" name="room"  required>
+        <button type="submit">Create Room</button>
+    </form>
+
+</body>
+</html>

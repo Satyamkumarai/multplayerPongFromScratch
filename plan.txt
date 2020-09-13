@@ -1,0 +1,31 @@
+Client Connects to server
+Client asks to join a particular Room
+Server joins the Client to the Room
+Server sends a unique ID to the first player that joins This will be identified as player 1
+When the no of players in the room is 2 
+Server Sends a STARTGAME
+The game is Started..
+When a player looses RESTARTGAME is initiated 
+
+
+
+
+
+STARTGAME:
+    Server sends velocity of the ball and the playerId
+    Client recieves velocity of ball
+        if playerId matches it's recieved ID 
+            The velocity of the ball is switched..
+        else
+            The velocity if the ball is saved as is..
+    Client intitiallizes the ball var
+    Client starts the game..
+    
+RESTARTGAME:
+    Client sends that the player has won
+    The server checks for ?????
+    The server send the score to both the players
+    The server sends A restart for both players 
+
+    THe Client recieve the scores and set it 
+    The clients restart the game..
