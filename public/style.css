@@ -1,9 +1,11 @@
 #canvas{
     background:rgb(43, 42, 46);
 }
+
 .empty{
     color: rgb(226, 43, 43);
 }
+
 body{
     background: black;
     -youbkit-touch-callout: none; /* iOS Safari */
@@ -22,10 +24,12 @@ body{
     font-size:50px;
     color:rgb(195, 255, 0);
 }
+
 #scoreboard .score{
     text-align: center;
 
 }
+
 #scoreboard label{
     color:rgb(193, 206, 211);
 }
